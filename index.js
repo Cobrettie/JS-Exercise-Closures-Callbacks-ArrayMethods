@@ -88,9 +88,12 @@ function processLastItem(stringList, callback) {
  * should return 1000.
 */
 function processSum(numberList, callback) {
-  return callback(numberList.reduce(function(a, b) {
-    return a + b;
-  }, 0));
+  let sum = 0;
+  for (let i = 0; i < numberList.length; i++) {
+    sum += numberList[i]
+  }
+
+  return callback(sum);
 }
 
 /**
@@ -136,7 +139,7 @@ function processProduct(num1, num2, callback) {
  * should return "sad".
 */
 function processContains(item, list, callback) {
-  // left off here 
+  // left off here 1/16/20
   return callback(list.includes(item));
 }
 
