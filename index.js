@@ -273,7 +273,7 @@ function tallyUpDonations(runners) {
 */
 function counterMaker() {
   let count = 0;
-  
+
   function counter() {
     return count++; 
   }
@@ -301,8 +301,17 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit() {
+  let count = 0;
+  
+  function counter() {
+    if (count === 4) {
+      count = 0;
+    } 
+    return count++;
+  }
+
+  return counter;
 }
 
 /////////////// END OF CHALLENGE ///////////////
