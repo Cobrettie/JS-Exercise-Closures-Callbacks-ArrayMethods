@@ -206,7 +206,6 @@ function getFullNames(runners) {
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
 function firstNamesAllCaps(runners) {
-  /* CODE HERE */
   const allCapNames = runners.map((name) => {
     const capFirstName = name.first_name.toUpperCase();
     return `${capFirstName}`;
@@ -214,6 +213,9 @@ function firstNamesAllCaps(runners) {
 
   return allCapNames;
 }
+
+// left off here, 1/18/20 - going to take pictures with LynN at an old church with an old truck... lets see how it goes!
+// back! I truly had a good time. P.S. I need to build the journaling application
 
 /**
  * ### Challenge `getRunnersByTShirtSize`
@@ -228,8 +230,11 @@ function firstNamesAllCaps(runners) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
+function getRunnersByTShirtSize(runners, tShirtSize) {
   /* CODE HERE */
+  const specificShirtSize = runners.filter(runner => runner.shirt_size === tShirtSize);
+
+  return specificShirtSize;
 }
 
 /**
